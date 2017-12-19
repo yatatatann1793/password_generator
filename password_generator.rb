@@ -26,12 +26,17 @@ class PasswordGenerator
   def password_check
     return false unless has_upcase_check
     return false unless has_number_check
-    true
+    has_downcase_check
   end
 
   def has_upcase_check
     return true unless @has_upcase_check
     @password.match(/[A-Z]/)
+  end
+
+  def has_downcase_check
+    return true unless @has_upcase_check
+    @password.match(/[a-z]/)
   end
 
   def has_number_check
