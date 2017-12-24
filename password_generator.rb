@@ -35,7 +35,6 @@ class PasswordGenerator
   end
 
   def has_downcase_check
-    return true unless @has_upcase_check
     @password.match(/[a-z]/)
   end
 
